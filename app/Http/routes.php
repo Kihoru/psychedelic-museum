@@ -33,6 +33,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('logout', 'LoginController@logout');
 
     Route::group(['middleware' => ['auth']], function(){
-        Route::get('dashboard',function(){ return 'dashboard'; });
+        Route::get('dashboard', 'DashboardController@showDashboard');
     });
 });

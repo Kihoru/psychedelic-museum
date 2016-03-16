@@ -8,11 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Auth;
-
+use App\User;
 class LoginController extends Controller
 {
     public function login(Request $request) {
-
 
         if(Auth::check()) return redirect()->intended('dashboard');
 
@@ -23,7 +22,6 @@ class LoginController extends Controller
                 'password' => 'required|max:30',
                 'remember' => 'in:remember' // si checked = bonne valeur
             ]);
-
             $remember = $request->input('remember')? true : false;
 
             $credentials = $request->only('email', 'password');
@@ -37,7 +35,6 @@ class LoginController extends Controller
             }
         }
         else {
-
             return view('auth.login');
         }
     }

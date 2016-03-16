@@ -1,1 +1,3 @@
-<h1>bonjour je suis le dashboard</h1>
+<h1>Hello {{$user->name}}</h1>
+
+@include('admin.partials.dashboardNav')
