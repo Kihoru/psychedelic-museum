@@ -27,5 +27,12 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+
+    Route::post('login', 'LoginController@login');
+    Route::get('admin', 'LoginController@login');
+    Route::get('logout', 'LoginController@logout');
+
+    Route::group(['middleware' => ['auth']], function(){
+        Route::get('dashboard',function(){ return 'dashboard'; });
+    });
 });
