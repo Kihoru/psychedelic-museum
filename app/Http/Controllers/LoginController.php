@@ -30,10 +30,10 @@ class LoginController extends Controller
 
             if(Auth::attempt($credentials, $remember)) {
 
-                return redirect('dashboard')->with(['message' => "J'aime le poulet"]);
+                return redirect('dashboard');
             }
             else {
-                return back()->withInput($request->only('email', 'remember'))->with(['message' => "Je n'aime pas le poulet"]);
+                return back()->withInput($request->only('email', 'remember'));
             }
         }
         else {
