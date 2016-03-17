@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8980d94-f5f0-4aa9-a364-36fb8e4f84be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/app.min.css" afterPath="$PROJECT_DIR$/public/assets/css/app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/sass/modules/dashboard.scss" afterPath="$PROJECT_DIR$/resources/assets/sass/modules/dashboard.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/partials/dashboardNav.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partials/dashboardNav.blade.php" />
-    </list>
+    <list default="true" id="a8980d94-f5f0-4aa9-a364-36fb8e4f84be" name="Default" comment="" />
     <ignored path="psychedelic museum.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
