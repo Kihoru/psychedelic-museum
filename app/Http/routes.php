@@ -37,5 +37,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('settings', 'DashboardController@showSettings');
         Route::get('users', 'DashboardController@showUsers');
         Route::get('dashboard', 'DashboardController@showDashboard');
+        Route::post('dashboard', 'DashboardController@create_event');
     });
 });
