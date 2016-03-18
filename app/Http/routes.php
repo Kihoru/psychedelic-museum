@@ -33,6 +33,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('logout', 'LoginController@logout');
 
     Route::group(['middleware' => ['auth']], function(){
+        Route::get('eventlist', 'DashboardController@showEventList');
+        Route::get('settings', 'DashboardController@showSettings');
+        Route::get('users', 'DashboardController@showUsers');
         Route::get('dashboard', 'DashboardController@showDashboard');
     });
 });

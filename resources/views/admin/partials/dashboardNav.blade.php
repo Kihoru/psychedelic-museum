@@ -1,11 +1,25 @@
 <ul class="dashboard_nav">
-    <h2>Hello {{$user->name}}</h2>
+    <li><h2>Bienvenue <span class="italic-user">{{$user->name}}</span></h2></li>
 
-
-    <li><a href="">Créer un évenement</a></li>
-    <li><a href="">Liste des évenements</a></li>
-    <li><a href="">Utilisateurs</a></li>
-    <li><a href="">Paramètres</a></li>
-    <li><a href="{{url('logout')}}">Déconnexion</a></li><i class="fa fa-sign-out"></i>
-
+    @if($classToggleEvents == 'board')
+        <li><a class="create blue-clicked" href="{{url('dashboard')}}">Creer un Ã©venement</a></li>
+    @else
+        <li><a class="create" href="{{url('dashboard')}}">Creer un Ã©venement</a></li>
+    @endif
+    @if($classToggleEvents == 'list')
+        <li><a class="list blue-clicked" href="{{url('eventlist')}}">Liste des Ã©venements</a></li>
+    @else
+        <li><a class="list" href="{{url('eventlist')}}">Liste des Ã©venements</a></li>
+    @endif
+    @if($classToggleEvents == 'users')
+        <li><a class="users blue-clicked" href="{{url('users')}}">Utilisateurs</a></li>
+    @else
+        <li><a class="users" href="{{url('users')}}">Utilisateurs</a></li>
+    @endif
+    @if($classToggleEvents == 'settings')
+        <li><a class="settings blue-clicked" href="{{url('settings')}}">ParamÃ¨tres</a></li>
+    @else
+        <li><a class="settings" href="{{url('settings')}}">ParamÃ¨tres</a></li>
+    @endif
+    <li class="disconnect"><a href="{{url('logout')}}">DÃ©connexion<i class="fa fa-sign-out"></i></a></li>
 </ul>

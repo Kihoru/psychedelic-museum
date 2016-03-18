@@ -1,0 +1,14 @@
+{
+  "name": "psychedelic museum",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kihoru <thomas.graph.rigal@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Kihoru/psychedelic-museum",
+  "moduleType": [
+    "es6",
+    "node"
+  ]
+}
