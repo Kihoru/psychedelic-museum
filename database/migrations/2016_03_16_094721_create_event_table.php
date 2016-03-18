@@ -18,7 +18,8 @@ class CreateEventTable extends Migration
             $table->string('event_date');
             $table->text('abstract');
             $table->text('content');
-            $table->timestamp('created_at');
+            $table->text('video_uri');
+            $table->dateTime('created_at');
         });
     }
 
