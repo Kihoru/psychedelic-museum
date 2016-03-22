@@ -34,7 +34,7 @@
 .italic-user{
   font-style: italic;
 }
-.fa{
+.dashboard_nav .fa{
   margin-left: 10px;
   color: #fff;
   transform: rotate(180deg);
@@ -136,4 +136,113 @@ body{
 .send_event:hover{
   background-color: #0079c8;
   transition: all 0.5s ease-in;
+}
+
+#event_list .fa{
+  color: black;
+}
+#event_list, .element_list{
+  margin-left: 100px;
+}
+#event_list li{
+  line-height: 42px;
+}
+
+.element_list{
+  background-color: #f4f4f4;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-bottom: 1px solid black;
+  font-family: arial, sans-serif;
+}
+.element_list li, .element_list ul{
+  display: inline-block;
+  vertical-align: middle;
+}
+.color_red{
+  background-color: red;
+  width: 18px;
+  display: block;
+  height: 45px;
+  vertical-align: middle;
+}
+
+.bold_list{
+  display: inline-block;
+  margin-left: 150px;
+  font-family: theboldfont, sans-serif;
+}
+.bold_list:first-of-type{
+  margin-left: 0;
+}
+
+.name_list{
+   width: 190px;
+}
+.date_list{
+  width: 350px;
+}
+
+.edit_list a{
+  color: black;
+}
+
+// ================================== USER LIST ================================
+
+.users_list li{
+  display: inline-block;
+  font-family: arial, sans-serif;
+  width: 150px;
+}
+
+.users_list li:last-of-type{
+  margin-left: 50px;
+  width: 50px;
+}
+
+.users_list a{
+  color: black;
+}
+
+.users_list{
+  margin-left: 150px;
+  background-color: #dadada;
+  line-height: 42px;
+  padding-left: 15px;
+  border-bottom: 1px solid black;
+}
+
+.info_users_list li{
+  display: inline-block;
+  font-family: arial, sans-serif;
+  width: 150px;
+}
+
+.info_users_list{
+  margin-left: 165px;
+  margin-bottom: 25px;
+}
+
+.create_user_title{
+  margin-top: 50px;
+  font-size: 18px !important;
+}
+
+
+.user_form{
+  font-family: arial, sans-serif;
+  margin-left: 150px;
+}
+
+.user_form li label{
+  width: 300px;
+  display: block;
+}
+
+.user_form li{
+  margin-bottom: 15px;
+}
+
+.user_form li label, .user_form li input{
+  display: inline-block;
 }

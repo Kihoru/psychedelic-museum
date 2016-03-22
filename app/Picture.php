@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Picture extends Model
 {
     protected $fillable=[
-        'event_id',
         'uri',
-        'name'];
+        'name',
+        'event_id'];
 
     public function event()
     {

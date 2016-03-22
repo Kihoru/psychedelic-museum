@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{url('assets/css/app.min.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <div id="dashboard-navigation">

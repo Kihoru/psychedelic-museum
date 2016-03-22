@@ -4,7 +4,7 @@
 @section('content')
 <h1>Créer un évenement</h1>
 
-<form action="{{url('dashboard')}}" method="post" id="createEvent">
+<form enctype="multipart/form-data" action="{{url('dashboard')}}" method="POST" id="createEvent">
     <div class="form_line">
         <label>Titre de l'évenement : </label>
         <div class="input_form">

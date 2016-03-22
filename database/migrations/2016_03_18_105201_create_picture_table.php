@@ -17,7 +17,7 @@ class CreatePictureTable extends Migration
             $table->integer('event_id')->unsigned()->nullable();
             $table->string('name', 100);
             $table->string('uri');
-            $table->foreign('event_id')->references('id')->on('event')->onDelete('SET NULL');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('SET NULL');
             $table->timestamps();
         });
     }

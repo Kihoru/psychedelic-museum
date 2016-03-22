@@ -38,5 +38,10 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('users', 'DashboardController@showUsers');
         Route::get('dashboard', 'DashboardController@showDashboard');
         Route::post('dashboard', 'DashboardController@create_event');
+        Route::get('edit/{id}', 'DashboardController@showEdit');
+        Route::get('delete/{id}', 'DashboardController@destroy');
+        Route::post('edit/{id}', 'DashboardController@update');
+        Route::get('deleteUser/{id}', 'DashboardController@deleteUser');
+        Route::post('createUser', 'DashboardController@createUser');
     });
 });

@@ -11,7 +11,7 @@ class EventTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('event')->insert([
+        DB::table('events')->insert([
 
             [
                 'name' => 'Release Party',
