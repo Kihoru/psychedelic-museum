@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
@@ -11,6 +12,8 @@ use App\Http\Requests\EventRequest;
 use File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Pagination\PaginationServiceProvider;
+use Illuminate\Pagination;
 
 class DashboardController extends Controller
 {
@@ -29,6 +32,8 @@ class DashboardController extends Controller
         if ($request->user())
         {
             $events = Event::all();
+            $this->compareTimeEvent($events);
+            //->paginate(2)
             $classToggleEvents = 'list';
             $user = $request->user();
             return view('admin.parts.event-list', compact('user', 'classToggleEvents', 'events'));
@@ -89,6 +94,7 @@ class DashboardController extends Controller
             'event_date_begin' => 'required|Min:10|Max:10',
             'event_date_end' => 'required|Min:10|Max:10',
             'content' => 'required',
+            'localisation' => 'required',
             'video_uri' => 'Max:255',
             'picture' => 'required|image|min:1|max:10000'
         ]);
@@ -100,6 +106,7 @@ class DashboardController extends Controller
             'event_date_begin' => $request->input('event_date_begin'),
             'event_date_end' => $request->input('event_date_end'),
             'abstract' => $abstract,
+            'localisation' => $request->input('localisation'),
             'content' => $request->input('content'),
             'video_uri' => $request->input('video_uri')
             ]);
@@ -138,9 +145,10 @@ class DashboardController extends Controller
 
     $event->update([
         'name' => $request->input('name'),
-        'event_date' => $request->input('event_date_begin'),
+        'event_date_begin' => $request->input('event_date_begin'),
         'event_date_end' => $request->input('event_date_end'),
         'abstract' => $abstract,
+        'localisation' => $request->input('localisation'),
         'content' => $request->input('content'),
         'video_uri' => $request->input('video_uri')
     ]);
@@ -262,13 +270,37 @@ class DashboardController extends Controller
                 ]);
                 return back();
             }
-
         }
-
     }
 
-    public function compareTimeEvent()
+    public function compareTimeEvent($events)
     {
-        
+        $now = Carbon::today();
+        foreach($events as $event)
+        {
+            $dateBegin = Carbon::parse($event->event_date_begin);
+            $dateEnd = Carbon::parse($event->event_date_end);
+            if($now->eq($dateBegin) == true || $now->gt($dateBegin) && $now->lt($dateEnd))
+            {
+                $event->update([
+                    'status' => 'en cours'
+                ]);
+                $event->save();
+            }
+            if($now->lt($dateBegin))
+            {
+                $event->update([
+                    'status' => 'a venir'
+                ]);
+                $event->save();
+            }
+            if($now->gt($dateEnd))
+            {
+                $event->update([
+                    'status' => 'terminer'
+                ]);
+                $event->save();
+            }
+        }
     }
 }

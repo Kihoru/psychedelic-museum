@@ -17,6 +17,8 @@ class CreateEventTable extends Migration
             $table->string('name');
             $table->string('event_date_begin');
             $table->string('event_date_end');
+            $table->enum('status', ['en cours', 'terminer', 'a venir'])->default('a venir');
+            $table->string('localisation');
             $table->text('abstract');
             $table->text('content');
             $table->text('video_uri');

@@ -21,7 +21,13 @@
             <div class="input_form">
                 <input type="text" name="event_date_end" id="date_edit_end" value="{{$event->event_date_end}}">
             </div>
-            <p>(sous forme jj/mm/aaaa)</p>
+            <p>(sous forme jj-mm-aaaa)</p>
+        </div>
+        <div class="form_line">
+            <label>Localisation de l'évenement : </label>
+            <div class="input_form">
+                <input id="localisation" type="text" name="localisation">
+            </div>
         </div>
         <div class="form_line">
             <label>Description de l'évenement : </label>

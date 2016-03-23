@@ -62,7 +62,7 @@ body{
 #dashboard-content{
   margin-left: 50px;
   vertical-align: top;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 #dashboard-content{
   max-width: 55%;
@@ -91,9 +91,10 @@ body{
 #createEvent label{
   margin-right: 150px;
   text-align: right;
-  width: 191px;
+  width: 206px;
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 10px;
 
 }
 
@@ -157,13 +158,6 @@ body{
 }
 .element_list li, .element_list ul{
   display: inline-block;
-  vertical-align: middle;
-}
-.color_red{
-  background-color: red;
-  width: 18px;
-  display: block;
-  height: 45px;
   vertical-align: middle;
 }
 
@@ -300,4 +294,70 @@ body{
 .send_settings:hover{
   background-color: #0079c8;
   transition: all 0.5s ease-in;
+}
+
+//==================== legend ====================== //
+
+#legend{
+  width: 600px;
+  margin-top: 150px;
+  margin-left: 150px;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+
+}
+
+.legend_element{
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.green_legend{
+  margin-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #46b77a;
+}
+.orange_legend{
+  margin-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #f7ad84;
+}
+.grey_legend{
+  margin-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #b4b4b4;
+}
+
+.color_orange{
+  background-color: #f7ad84;
+  width: 18px;
+  display: block;
+  height: 45px;
+  vertical-align: middle;
+}
+.color_green{
+  background-color: #46b77a;
+  width: 18px;
+  display: block;
+  height: 45px;
+  vertical-align: middle;
+}
+.color_grey{
+  background-color: #b4b4b4;
+  width: 18px;
+  display: block;
+  height: 45px;
+  vertical-align: middle;
 }

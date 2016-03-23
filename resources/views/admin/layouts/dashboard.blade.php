@@ -23,10 +23,10 @@
 
     <script>
         $(function() {
-            $('#date_begin').datepicker({ dateFormat: 'dd/mm/yy' });
-            $('#date_end').datepicker({ dateFormat: 'dd/mm/yy' });
-            $('#date_edit_end').datepicker({ dateFormat: 'dd/mm/yy' });
-            $('#date_edit_begin').datepicker({ dateFormat: 'dd/mm/yy' });
+            $('#date_begin').datepicker({ dateFormat: 'dd-mm-yy' });
+            $('#date_end').datepicker({ dateFormat: 'dd-mm-yy' });
+            $('#date_edit_end').datepicker({ dateFormat: 'dd-mm-yy' });
+            $('#date_edit_begin').datepicker({ dateFormat: 'dd-mm-yy' });
         });
     </script>
 </body>

@@ -1,15 +1,15 @@
 <ul class="dashboard_nav">
     <li><h2>Bienvenue <span class="italic-user">{{$user->name}}</span></h2></li>
 
-    @if($classToggleEvents == 'board')
-        <li><a class="create blue-clicked" href="{{url('dashboard')}}">Creer un évenement</a></li>
-    @else
-        <li><a class="create" href="{{url('dashboard')}}">Creer un évenement</a></li>
-    @endif
     @if($classToggleEvents == 'list')
         <li><a class="list blue-clicked" href="{{url('eventlist')}}">Liste des évenements</a></li>
     @else
         <li><a class="list" href="{{url('eventlist')}}">Liste des évenements</a></li>
+    @endif
+    @if($classToggleEvents == 'board')
+        <li><a class="create blue-clicked" href="{{url('dashboard')}}">Creer un évenement</a></li>
+    @else
+        <li><a class="create" href="{{url('dashboard')}}">Creer un évenement</a></li>
     @endif
     @if($classToggleEvents == 'users')
         <li><a class="users blue-clicked" href="{{url('users')}}">Utilisateurs</a></li>

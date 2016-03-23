@@ -16,7 +16,7 @@ class LoginController extends Controller
 {
     public function login(Request $request) {
 
-        if(Auth::check()) return redirect()->intended('dashboard');
+        if(Auth::check()) return redirect()->intended('eventlist');
 
         if($request->isMethod('post')) {
 
@@ -30,8 +30,7 @@ class LoginController extends Controller
             $credentials = $request->only('email', 'password');
 
             if(Auth::attempt($credentials, $remember)) {
-
-                return redirect('dashboard');
+                return redirect('eventlist');
             }
             else {
                 return back()->withInput($request->only('email', 'remember'));

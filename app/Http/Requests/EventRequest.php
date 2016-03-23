@@ -27,7 +27,9 @@ class EventRequest extends Request
             'name' => 'required',
             'event_date_begin' => 'required|Min:10|Max:10',
             'event_date_end' => 'required|Min:10|Max:10',
+            'localisation' => 'required',
             'content' => 'required',
+            'status' => 'Min:1|Max:50',
             'video_uri' => 'Max:255',
             'picture' => 'image'
         ];

@@ -25,7 +25,7 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+Route::pattern('id','[1-9][0-9]*');
 Route::group(['middleware' => ['web']], function () {
 
     Route::post('login', 'LoginController@login');

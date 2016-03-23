@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+
 
 class Event extends Model
 {
@@ -13,6 +15,8 @@ class Event extends Model
         'event_date_begin',
         'event_date_end',
         'abstract',
+        'localisation',
+        'status',
         'content',
         'video_uri'
     ];

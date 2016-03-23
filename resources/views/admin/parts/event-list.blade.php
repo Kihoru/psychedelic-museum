@@ -11,7 +11,18 @@
         </ul>
         @foreach($events as $event)
             <ul class="element_list">
-                <li class="color_red"></li>
+                @if($event->status == 'a venir')
+                    <li class="color_orange"></li>
+                @endif
+
+                @if($event->status == 'en cours')
+                        <li class="color_green"></li>
+                @endif
+
+                @if($event->status == 'terminer')
+                        <li class="color_grey"></li>
+                @endif
+
                 <li class="name_list">
                     {{$event->name}}
                 </li>
@@ -27,4 +38,20 @@
                 </ul>
             </ul>
         @endforeach
-@stop
+
+        <div id="legend">
+            <section class="legend_element">
+                <div class="green_legend"></div>
+                <p>Evenement en cours</p>
+            </section>
+            <section class="legend_element">
+                <div class="orange_legend"></div>
+                <p>Evenement à venir</p>
+            </section>
+            <section class="legend_element">
+                <div class="grey_legend"></div>
+                <p>Evenement terminer</p>
+            </section>
+
+        </div>
+    @stop
