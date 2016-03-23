@@ -86,7 +86,8 @@ class DashboardController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'event_date' => 'required',
+            'event_date_begin' => 'required|Min:10|Max:10',
+            'event_date_end' => 'required|Min:10|Max:10',
             'content' => 'required',
             'video_uri' => 'Max:255',
             'picture' => 'required|image|min:1|max:10000'
@@ -96,7 +97,8 @@ class DashboardController extends Controller
 
         $event = Event::create([
             'name' => $request->input('name'),
-            'event_date' => $request->input('event_date'),
+            'event_date_begin' => $request->input('event_date_begin'),
+            'event_date_end' => $request->input('event_date_end'),
             'abstract' => $abstract,
             'content' => $request->input('content'),
             'video_uri' => $request->input('video_uri')
@@ -126,8 +128,9 @@ class DashboardController extends Controller
     $event = Event::find($id);
     $im = $request->file('picture');
     if (!is_null($im)) {
-        if (!empty($event->picture))
+        if (!is_null($event->picture)) {
             $this->deletePicture($event);
+        }
         $this->upload($im, $event->id);
     }
 
@@ -135,7 +138,8 @@ class DashboardController extends Controller
 
     $event->update([
         'name' => $request->input('name'),
-        'event_date' => $request->input('event_date'),
+        'event_date' => $request->input('event_date_begin'),
+        'event_date_end' => $request->input('event_date_end'),
         'abstract' => $abstract,
         'content' => $request->input('content'),
         'video_uri' => $request->input('video_uri')
@@ -147,8 +151,9 @@ class DashboardController extends Controller
     {
         if (!is_null($event->picture)) {
             $fileName = $event->picture->uri;
-            if (File::exists($fileName))
-                var_dump('test');
+            if (File::exists($fileName)) {
+                File::delete($fileName);
+            }
             $event->picture->delete();
             return true;
         }
@@ -159,13 +164,14 @@ class DashboardController extends Controller
     {
         $ext = $im->getClientOriginalExtension();
         $uri = str_random(12) . '.' . $ext;
+        $destination_path = 'uploads/';
         $name = $im->getClientOriginalName();
         Picture::create([
-            'uri'        => $uri,
+            'uri'        => $destination_path.$uri,
             'name' => $name,
             'event_id' => $id
         ]);
-        $im->move(env('UPLOAD_PATH', './uploads'), $uri);
+        $im->move(env('UPLOAD_PATH', $destination_path), $uri);
     }
 
     public function destroy($id)
@@ -197,6 +203,7 @@ class DashboardController extends Controller
             'email' => 'required|'
         ]);
 
+
         $passwordToHash = $request->input('password');
         $passwordForVerif = $request->input('password_verif');
 
@@ -209,5 +216,59 @@ class DashboardController extends Controller
             ]);
         }
         return back()->with(['message', 'utilisateur créer']);
+    }
+
+    public function changeName(Request $request)
+    {
+
+        if ($request->user())
+        {
+            $user = $request->user();
+            $user->update([
+                'name' => $request->input('name'),
+            ]);
+            return back();
+        }
+
+    }
+    public function changeEmail(Request $request)
+    {
+
+        if ($request->user())
+        {
+            $user = $request->user();
+            $user->update([
+                'email' => $request->input('email'),
+            ]);
+            return back();
+        }
+
+    }
+    public function changePassword(Request $request)
+    {
+        $this->validate($request, [
+            'password' => 'required|Max:20'
+        ]);
+
+        if ($request->user())
+        {
+            $password = $request->input('password');
+            $passwordVerif = $request->input('password_verif');
+            if($password == $passwordVerif)
+            {
+                $user = $request->user();
+                $user->update([
+                    'password' => Hash::make($password),
+                ]);
+                return back();
+            }
+
+        }
+
+    }
+
+    public function compareTimeEvent()
+    {
+        
     }
 }

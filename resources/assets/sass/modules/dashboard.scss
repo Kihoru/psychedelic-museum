@@ -199,7 +199,9 @@ body{
   margin-left: 50px;
   width: 50px;
 }
-
+.user_form p{
+  font-size: 10px;
+}
 .users_list a{
   color: black;
 }
@@ -223,6 +225,8 @@ body{
   margin-bottom: 25px;
 }
 
+
+
 .create_user_title{
   margin-top: 50px;
   font-size: 18px !important;
@@ -245,4 +249,55 @@ body{
 
 .user_form li label, .user_form li input{
   display: inline-block;
+}
+
+// ================================ SETTINGS ===================== //
+
+
+.title_settings_h2{
+  font-family: arial, sans-serif;
+}
+#form_settings{
+  margin-left: 150px;
+}
+
+#form_settings .fa{
+  color: #004c7d;
+}
+
+#form_settings span{
+  font-size: 10px;
+}
+
+#form_settings h2{
+  margin-bottom: 15px;
+}
+.form_change_settings{
+  line-height: 30px;
+
+  height: 80px;
+}
+.form_change_settings label, .form_change_settings label
+{
+  display: block;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+}
+
+.send_settings{
+  background-color: #004c7e;
+  border: solid 1px black;
+  line-height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  color: white;
+  font-family: theboldfont, sans-serif;
+  font-size: 17px;
+  margin: 0 0 0 50px;
+  transition: all 0.5s ease-in;
+}
+
+.send_settings:hover{
+  background-color: #0079c8;
+  transition: all 0.5s ease-in;
 }

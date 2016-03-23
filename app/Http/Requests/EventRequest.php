@@ -25,7 +25,8 @@ class EventRequest extends Request
     {
         return [
             'name' => 'required',
-            'event_date' => 'required',
+            'event_date_begin' => 'required|Min:10|Max:10',
+            'event_date_end' => 'required|Min:10|Max:10',
             'content' => 'required',
             'video_uri' => 'Max:255',
             'picture' => 'image'

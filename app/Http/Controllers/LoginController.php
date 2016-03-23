@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DashboardController;
 
 use Auth;
 use App\User;
+use App\Events\Event;
+
 class LoginController extends Controller
 {
     public function login(Request $request) {

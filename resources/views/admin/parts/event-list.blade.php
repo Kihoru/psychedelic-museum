@@ -6,7 +6,7 @@
 
         <ul id="event_list">
             <li class="bold_list">Nom</li>
-            <li class="bold_list">Date de l'évenement</li>
+            <li class="bold_list">Dates de l'évenement</li>
             <li class="bold_list">Modifier / Supprimer</li>
         </ul>
         @foreach($events as $event)
@@ -16,7 +16,10 @@
                     {{$event->name}}
                 </li>
                 <li class="date_list">
-                    {{$event->event_date}}
+                    du
+                    {{$event->event_date_begin}}
+                    au
+                    {{$event->event_date_end}}
                 </li>
                 <ul class="edit_list">
                     <li><a href="{{url('edit', $event->id)}}"><i class="fa fa-pencil-square-o"></i></a></li>

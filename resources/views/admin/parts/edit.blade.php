@@ -13,9 +13,13 @@
 
         </div>
         <div class="form_line">
-            <label>Date de l'évenement : </label>
+            <label>Date du début de l'évenement : </label>
             <div class="input_form">
-                <input type="text" name="event_date" value="{{$event->event_date}}">
+                <input type="text" name="event_date_begin" id="date_edit_begin" value="{{$event->event_date_begin}}">
+            </div>
+            <label>Date de fin de l'évenement : </label>
+            <div class="input_form">
+                <input type="text" name="event_date_end" id="date_edit_end" value="{{$event->event_date_end}}">
             </div>
             <p>(sous forme jj/mm/aaaa)</p>
         </div>

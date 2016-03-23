@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    protected $dates = ['dob'];
+
     protected $fillable=[
         'name',
-        'event_date',
+        'event_date_begin',
+        'event_date_end',
         'abstract',
         'content',
         'video_uri'

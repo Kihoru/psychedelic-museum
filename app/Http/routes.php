@@ -43,5 +43,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::post('edit/{id}', 'DashboardController@update');
         Route::get('deleteUser/{id}', 'DashboardController@deleteUser');
         Route::post('createUser', 'DashboardController@createUser');
+        Route::post('sendName', 'DashboardController@changeName');
+        Route::post('sendEmail', 'DashboardController@changeEmail');
+        Route::post('sendPassword', 'DashboardController@changePassword');
     });
 });

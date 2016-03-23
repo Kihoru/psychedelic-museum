@@ -40,6 +40,7 @@
             <li>
                 <label>Mot de passe :</label>
                 <input type="password" name="password">
+                <p>(entre 5 et 20 caractères)</p>
             </li>
             <li>
                 <label>Vérifier votre mot de passe :</label>
