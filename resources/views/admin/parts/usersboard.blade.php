@@ -15,7 +15,7 @@
             <li>{{$user->name}}</li>
             <li>{{$user->email}}</li>
             <li>Password crypté</li>
-            @if($user->name == 'admin')
+            @if($user->status == 'admin')
                 <li></li>
             @else
             <li>

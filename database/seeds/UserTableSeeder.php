@@ -16,7 +16,8 @@ class UserTableSeeder extends Seeder
             [
                 'name' => 'admin',
                 'password' => Hash::make('123a123a'),
-                'email' => 'jais@pingpong.fr'
+                'email' => 'jais@pingpong.fr',
+                'status' => 'admin'
             ]
 
         ]);
