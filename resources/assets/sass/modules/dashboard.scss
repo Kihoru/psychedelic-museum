@@ -361,3 +361,94 @@ body{
   height: 45px;
   vertical-align: middle;
 }
+
+// ============================= LOGIN ========================== //
+
+#login{
+  margin: 0 auto;
+  width: 100%;
+  background: url("pictures/backlogin.jpg") 0% 100% no-repeat;
+  background-size: cover;
+}
+
+.wrapper{
+  width: 100%;
+  text-align: center;
+  padding-top: 150px;
+}
+.error{
+  font-size: 10px;
+  color: red;
+}
+.wrapper form{
+  margin-top: 70px;
+  width: 404px;
+  margin-left: 35%;
+  background-color: #6bbfc3;
+  padding: 60px 40px;
+  margin-bottom: 400px;
+  border-radius: 15px;
+  border: 2px solid white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.wrapper label{
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.wrapper label, .wrapper input{
+  display: block;
+  margin-left: 12%;
+  margin-bottom: 10px;
+}
+#submit_button{
+  width: 110px;
+  margin-left: 58%;
+  background-color: #f88a95;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+#submit_button:hover{
+  background-color: #e67e89;
+  cursor: pointer;
+  cursor: hand;
+}
+ #submit_button:active{
+   background-color: #d0747d;
+   cursor: pointer;
+   cursor: hand;
+ }
+
+.wrapper input{
+  line-height: 30px;
+  width: 290px;
+  border: none;
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 5px;
+}
+
+.remember{
+  display: inline-block !important;
+  max-width: 110px !important;
+  margin-left: 0px !important;
+}
+
+#login h1{
+  color: white;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  font-size: 31px;
+  font-weight: lighter;
+  width: 250px;
+  margin-left: 42%;
+}
+
+.boldiful{
+  font-weight: bold;
+  font-family: arial-black, sans-serif;
+  font-size: 25px;
+}
