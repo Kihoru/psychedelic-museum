@@ -46,7 +46,10 @@
         <div class="input_form">
             <input type="text" name="video_uri">
         </div>
-        <p>(Partager > Intégrer > ligne iframe)</p>
+        <p class="help">?</p>
+        <div class="youtube_helper">
+            <img src="youtube_share.JPG">
+        </div>
 
         {{csrf_field()}}
 
