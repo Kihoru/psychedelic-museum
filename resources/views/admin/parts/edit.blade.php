@@ -4,7 +4,7 @@
 @section('content')
     <h1>Créer un évenement</h1>
 
-    <form enctype="multipart/form-data" action="{{url('edit/'.$event->id)}}" method="POST" id="editEvent">
+    <form enctype="multipart/form-data" action="{{url('edit/'.$event->id)}}" method="POST" id="createEvent">
         <div class="form_line">
             <label>Titre de l'évenement : </label>
             <div class="input_form">
@@ -15,18 +15,18 @@
         <div class="form_line">
             <label>Date du début de l'évenement : </label>
             <div class="input_form">
-                <input type="text" name="event_date_begin" id="date_edit_begin" value="{{$event->event_date_begin}}">
+                <input id="date_begin" type="text" name="event_date_begin" value="{{$event->event_date_begin}}">
             </div>
             <label>Date de fin de l'évenement : </label>
             <div class="input_form">
-                <input type="text" name="event_date_end" id="date_edit_end" value="{{$event->event_date_end}}">
+                <input id="date_end" type="text" name="event_date_end" value="{{$event->event_date_end}}">
             </div>
             <p>(sous forme jj-mm-aaaa)</p>
         </div>
         <div class="form_line">
             <label>Localisation de l'évenement : </label>
             <div class="input_form">
-                <input id="localisation" type="text" name="localisation">
+                <input id="localisation" type="text" name="localisation" value="{{$event->localisation}}">
             </div>
         </div>
         <div class="form_line">
@@ -46,7 +46,11 @@
             <div class="input_form">
                 <input type="text" name="video_uri" value="{{$event->video_uri}}">
             </div>
-            <p>(Partager > Intégrer > ligne iframe)</p>
+
+            <div id="youtube_helper">
+                <p id="help">?</p>
+                <img id="screen_youtube" src="{{url('assets/css/pictures/youtube_share.JPG')}}">
+            </div>
 
             {{csrf_field()}}
 
@@ -54,3 +58,4 @@
         </div>
     </form>
 @stop
+

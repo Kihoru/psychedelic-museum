@@ -31,20 +31,20 @@
         <ul>
             <li>
                 <label>Nom d'utilisateur :</label>
-                <input type="text" name="name">
+                <input class="text" type="text" name="name">
             </li>
             <li>
                 <label>Email :</label>
-                <input type="email" name="email">
+                <input class="text" type="email" name="email">
             </li>
             <li>
                 <label>Mot de passe :</label>
-                <input type="password" name="password">
+                <input class="text" type="password" name="password">
                 <p>(entre 5 et 20 caractères)</p>
             </li>
             <li>
                 <label>Vérifier votre mot de passe :</label>
-                <input type="password" name="password_verif">
+                <input class="text" type="password" name="password_verif">
             </li>
             <li>
                 {{csrf_field()}}

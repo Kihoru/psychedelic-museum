@@ -46,9 +46,10 @@
         <div class="input_form">
             <input type="text" name="video_uri">
         </div>
-        <p class="help">?</p>
-        <div class="youtube_helper">
-            <img src="youtube_share.JPG">
+
+        <div id="youtube_helper">
+            <p id="help">?</p>
+            <img id="screen_youtube" src="{{url('assets/css/pictures/youtube_share.JPG')}}">
         </div>
 
         {{csrf_field()}}
