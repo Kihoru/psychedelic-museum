@@ -99,7 +99,7 @@ class DashboardController extends Controller
             'picture' => 'required|image|min:1|max:10000'
         ]);
 
-        $abstract = substr($request->input('content'), 0, 15);
+        $abstract = substr($request->input('content'), 0, 140);
 
         $event = Event::create([
             'name' => $request->input('name'),
@@ -141,7 +141,7 @@ class DashboardController extends Controller
         $this->upload($im, $event->id);
     }
 
-    $abstract = substr($request->input('content'), 0, 15);
+    $abstract = substr($request->input('content'), 0, 140);
 
     $event->update([
         'name' => $request->input('name'),

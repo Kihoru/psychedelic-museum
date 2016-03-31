@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -32,6 +28,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('admin', 'LoginController@login');
     Route::get('login', 'LoginController@login');
     Route::get('logout', 'LoginController@logout');
+    Route::get('/', 'FrontController@index');
+    Route::get('selfie', 'FrontController@selfie');
+    Route::get('agenda', 'FrontController@agenda');
+    Route::get('history', 'FrontController@history');
 
     Route::group(['middleware' => ['auth']], function(){
         Route::get('eventlist', 'DashboardController@showEventList');

@@ -14,7 +14,7 @@
         <ul class="users_list">
             <li>{{$user->name}}</li>
             <li>{{$user->email}}</li>
-            <li>Password crypté</li>
+            <li>&bull;&bull;&bull;&bull;&bull;&bull;</li>
             @if($user->status == 'admin')
                 <li></li>
             @else
