@@ -353,7 +353,7 @@ canvas{
 
 #selfie_gallery{
   width: 80%;
-  margin-left: 20%;
+  margin-left: 15%;
   margin-top: 95px;
 }
 
@@ -660,7 +660,7 @@ canvas{
   color: white;
   text-shadow: -2px 2px 0px #f88b98;
   text-align: left;
-  margin-left: 18%;
+  margin-left: 15%;
   display: block;
   margin-bottom: 70px;
 }
@@ -668,48 +668,62 @@ canvas{
   width: 420px;
   padding-top: 50px;
   font-size: 20px;
-  margin-left: 75px;
+  margin-left: 15%;
+  color: white;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 }
 
 #histoire .text-left {
-  margin-left: 270px;
+  margin-left: 21%;
 }
 
 #histoire #bas-marge {
-  margin-bottom: 125px;
+  margin-bottom: 75px;
 }
-
+.bold{
+  font-weight: bolder;
+}
 #histoire img {
   position: absolute;
   border: 5px solid #fff;
 }
 
 #histoire #img3 {
-  //top: 0%;
+  top: 0;
   left: 50%;
+  width: 10%;
 }
 
 #histoire #img4 {
-  top: 16%;
-  right: 13%;
+  top: 17%;
+  right: 25%;
+  width: 13%;
 }
 
 #histoire #img1 {
-  top: 38%;
+  top: 37%;
   left: 43%;
+  width: 8%;
 }
 
 #histoire #img2 {
-  top: 43%;
-  right: 15%;
+  top: 42%;
+  right: 27%;
+  width: 20%;
 }
 
 /* === Fond === */
 
 #fond h1{
-  text-shadow: -2px 2px 2px rgba(248, 144, 154, 1);
+  font-family: 'theboldfont', arial, sans-serif;
+  font-size: 52px;
+  color: white;
+  text-shadow: -2px 2px 0px #73bdc0;
+  text-align: right;
+  margin-right: 15%;
+  display: block;
   margin-bottom: 70px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 #fond img {
@@ -719,46 +733,127 @@ canvas{
 }
 
 /* === Contreparties === */
-
-#contreparties h1 {
-  margin-top: 140px;
+#contreparties{
+  width: 100%;
+}
+#contreparties_title {
+  font-family: 'theboldfont', arial, sans-serif;
+  font-size: 52px;
+  color: white;
+  text-shadow: -2px 2px 0px #73bdc0;
+  text-align: left;
+  margin-left: 10%;
+  display: block;
   margin-bottom: 140px;
-  text-shadow: -2px 2px 2px rgba(248, 144, 154, 1);
+  margin-top: 140px;
 }
 
-#contreparties div {
-  position: relative;
-  display: inline-block;
-  width: 480px;
-  height: 180px;
-  background-color: #f8909a;
-  margin-bottom: 45px;
-  margin-left: 170px;
-
+.contreparties_box {
+  padding: 38px;
+  color: white;
+  display: block;
+  width: 100%;
+  background-color: #72bdc0;
   -moz-box-shadow: 5px 5px 5px 0px #656565;
   -webkit-box-shadow: 5px 5px 5px 0px #656565;
   -o-box-shadow: 5px 5px 5px 0px #656565;
   box-shadow: 5px 5px 5px 0px #656565;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+  margin-bottom: 70px;
 }
 
-#contreparties div h1 {
-  margin: 15px 0 15px 35px;
-  font-size: 50px;
+#col_left, #col_right{
+  display: inline-block;
+  width: 25%;
+}
+#col_left{
+  margin-left: 15%;
+}
+#col_right{
+  margin-left: 15%;
+}
+
+
+.contreparties_box h1 {
+  font-size: 34px;
+  font-family: "theboldfont", Helvetica, Arial, sans-serif;
+  margin-bottom: 35px;
+}
+
+.contreparties_box p {
+  font-size: 14px;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  line-height: 15px;
+}
+
+.n5e{
+  display: block;
   font-weight: bold;
+  font-size: 72px;
+  font-family: 'theboldfont', arial, sans-serif;
+  text-align: right;
 }
 
-#contreparties div p {
-  font-size: 17px;
-  margin-left: 30px;
-  margin-top: 2px;
+////////////////////////// REMERCIEMENT /////////////////////
+
+#remerciement{
+  color: white;
+  h1{
+    font-family: 'theboldfont', arial, sans-serif;
+    font-size: 52px;
+    color: white;
+    text-shadow: -2px 2px 0px #f8909a;
+    text-align: right;
+    margin-right: 15%;
+    display: block;
+    margin-bottom: 70px;
+    margin-top: 200px;
+  }
+  h2{
+    font-size: 27px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block;
+    width: 13%;
+    font-weight: bold;
+    margin-left: 15%;
+    vertical-align: middle;
+  }
+  .light{
+    font-size: 18px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  }
+  #touspsyche{
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'theboldfont', arial, sans-serif;
+    background-color: #6fbcc0;
+    -moz-box-shadow: 4px 4px 5px 0px #656565;
+    -webkit-box-shadow: 4px 4px 5px 0px #656565;
+    -o-box-shadow: 4px 4px 5px 0px #656565;
+    box-shadow: 4px 4px 5px 0px #656565;
+    margin-left: 2%;
+    vertical-align: middle;
+  }
 }
 
-#contreparties .n5e,#contreparties .n10e,#contreparties .n20e  {
-  font-weight: bold;
-  font-size: 48px;
-  position: absolute;
-  right: 5%;
-  bottom: 30%;
+#view_more{
+  display: inline-block;
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+  margin-left: 75%;
+  text-decoration: none;
+  font-family: 'theboldfont', arial, sans-serif;
+  background-color: #6fbcc0;
+  -moz-box-shadow: 4px 4px 5px 0px #656565;
+  -webkit-box-shadow: 4px 4px 5px 0px #656565;
+  -o-box-shadow: 4px 4px 5px 0px #656565;
+  box-shadow: 4px 4px 5px 0px #656565;
+  vertical-align: middle;
+  margin-top: 20px;
 }
+
 

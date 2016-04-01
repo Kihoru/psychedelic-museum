@@ -12,18 +12,17 @@
     <section id="histoire">
         <h1>L'histoire</h1>
 
-        <p><span class="bold">La collection Jaïs Elalouf</span>à la de ce projet est l'une des <span class="bold">plus grandes en Europe</span>avec un fond de <span class="bold">4000 oeuvres</span>(estampes, peinture, journaux, disques, etc.) ayant déjà montrées à l'occasion de plus de 30 expositions.</p>
+        <p><span class="bold">La collection Jaïs Elalouf </span>à la base de ce projet est l'une des <span class="bold">plus grandes en Europe </span>avec un fond de <span class="bold">4000 oeuvres </span>(estampes, peinture, journaux, disques, etc.) ayant déjà montrées à l'occasion de plus de 30 expositions.</p>
 
         <p id="bas-marge">C'est par l'intermédiaire de son amour pour la musique rock et jazz des années 1970 que Jaïs Elalouf est arrivé à constituer sa collection. Cet intérêt le porte vers les pochettes de vinyles, véritable vitrine de l'originalité de la musique de l'époque.</p>
 
         <p class="text-left">A travers la richesse de ce mouvement, il puise l'inspiration créatice pour ses performances audiovisuelles. C'est justement au cours de ses <span class="bold">500 concerts donnés à travers le monde</span> qu'il commence à explorer l'esthétique psychédélique et à rassambler frénétiquement ses oeuvres.</p>
 
         <p class="text-left">La collection Jaïs Elalouf donne toute sa valeur à un fabuleuc, hétéroclisme, <span class="bold">rassemblant de nombreux styles, époques, techniques</span> et support venus d'une trentaine de pays parmi lesquels la Pologne, les Etat-Unis, L'URSS, le Moyen-Orient, mais aussi l'Inde, le Mali, le Mexique et l'Australie. </p>
-
-        <img id="img3" src="" alt="image psyché">
-        <img id="img4" src="" alt="image psyché">
-        <img id="img1" src="" alt="image psyché">
-        <img id="img2" src="" alt="image psyché">
+        <img id="img3" src="{{url('assets/css/pictures/imgHistoires_03.jpg')}}" alt="image psyché">
+        <img id="img4" src="{{url('assets/css/pictures/imgHistoires_06.jpg')}}" alt="image psyché">
+        <img id="img1" src="{{url('assets/css/pictures/imgHistoires_10.jpg')}}" alt="image psyché">
+        <img id="img2" src="{{url('assets/css/pictures/imgHistoires_14.jpg')}}" alt="image psyché">
     </section>
 
     <section id="fond">
@@ -32,41 +31,88 @@
     </section>
 
     <section id="contreparties">
-        <h1>Contreparties</h1>
+        <h1 id="contreparties_title">Contreparties</h1>
 
-        <div class="contreparties_box">
-            <h1>Pack Beatles</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé<span class="n5e">5€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack 13th Elevator</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé<span class="n10e">10€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack Doors</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé <span class="n20e">20€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack Hawkwind</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé <span class="n20e">20€</span></p>
-        </div>
+       <div id="col_left">
+           <div class="contreparties_box">
+               <h1>Pack Beatles</h1>
+               <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé</p>
+               <label class="n5e">5€</label>
+           </div>
+           <div class="contreparties_box">
+               <h1>Pack 13th Elevator</h1>
+               <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé</p>
+               <label class="n5e">10€</label>
+           </div>
+           <div class="contreparties_box">
+               <h1>Pack Doors</h1>
+               <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé</p>
+               <label class="n5e">20€</label>
+           </div>
+           <div class="contreparties_box">
+               <h1>Pack Hawkwind</h1>
+               <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le musée</p>
+               <label class="n5e">50€</label>
+           </div>
+       </div>
 
-        <div class="contreparties_box">
-            <h1>Pack Tame Impala</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé<span class="n5e">5€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack Django Django</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé<span class="n10e">10€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack Pink Floyd</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé <span class="n20e">20€</span></p>
-        </div>
-        <div class="contreparties_box">
-            <h1>Pack Hendrix</h1>
-            <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé <span class="n20e">20€</span></p>
+        <div id="col_right">
+            <div class="contreparties_box">
+                <h1>Pack Tame Impala</h1>
+                <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé</p>
+                <label class="n5e">5€</label>
+            </div>
+            <div class="contreparties_box">
+                <h1>Pack Django Django</h1>
+                <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé</p>
+                <label class="n5e">10€</label>
+            </div>
+            <div class="contreparties_box">
+                <h1>Pack Pink Floyd</h1>
+                <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé</p>
+                <label class="n5e">20€</label>
+            </div>
+            <div class="contreparties_box">
+                <h1>Pack Hendrix</h1>
+                <p>Votre <span class="bold">Nom</span> inscrit sur la liste</p><p> des <span class="bold">mécènes</span> avec votre Selfie exposé. </p><p>Une <span class="bold">entrée</span> pour le mussé</p>
+                <label class="n5e">50€</label>
+            </div>
         </div>
     </section>
+    <section id="remerciement">
+        <h1>MERCI &Aacute; :</h1>
+        <h2>Toi aussi découvre ton côté Psyché, <span class="light">participe au jeu</span> <span class="normal">#TOUSPSYCHÉ</span></h2>
+        <a id="touspsyche" href="{{url('selfie')}}">#TOUSPSYCHE</a>
+    </section>
+    <div class="wrapper_content">
+        <section id="selfie_gallery">
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/1.png')}}" alt="selfies" class="selfis_done">
+                <p>@Eddyen</p>
+            </div>
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/2.png')}}" alt="selfies" class="selfis_done">
+                <p>@Laura</p>
+            </div>
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/3.png')}}" alt="selfies" class="selfis_done">
+                <p>@Corentin</p>
+            </div>
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/4.png')}}" alt="selfies" class="selfis_done">
+                <p>@Thomas</p>
+            </div>
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/5.png')}}" alt="selfies" class="selfis_done">
+                <p>@Groupe</p>
+            </div>
+            <div class="photo_example">
+                <img src="{{url('assets/css/pictures/6.png')}}" alt="selfies" class="selfis_done">
+                <p>@Groupe2</p>
+            </div>
+        </section>
+        <a id="view_more" href="{{url('selfie')}}">Voir plus</a>
+    </div>
+
 @stop
 
