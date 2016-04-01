@@ -427,6 +427,7 @@
   width: 100%;
   background: url("pictures/backlogin.jpg") 0% 100% no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .wrapper{
@@ -444,7 +445,6 @@
   margin-left: 35%;
   background-color: #6bbfc3;
   padding: 60px 40px;
-  margin-bottom: 400px;
   border-radius: 15px;
   border: 2px solid white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -509,4 +509,25 @@
   font-weight: bold;
   font-family: arial, sans-serif;
   font-size: 25px;
+}
+
+.return_button{
+  display: block;
+  background-color: #6bbfc3;
+  text-decoration: none;
+  line-height: 40px;
+  width: 10%;
+  color: white;
+  font-family: theboldfont, sans-serif;
+  font-size: 17px;
+  margin: 30px 0 279px 42%;
+  cursor: pointer;
+  border: none;
+}
+
+.return_button:hover{
+  background-color: #5ca1a4;
+}
+.return_button:active{
+  background-color: #487d80;
 }

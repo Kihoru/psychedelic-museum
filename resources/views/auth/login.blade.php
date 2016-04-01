@@ -34,9 +34,7 @@
                     <span class="warning {{Session::get('alert')}}">{{Session::get('message')}}</span>
                 @endif
             </form>
-
-
-            <a class="return_button" href="{{back()}}">Retour au site</a>
+            <a class="return_button" href="{{url('/')}}">Retour au site</a>
         </div>
     </div>
 

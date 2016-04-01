@@ -24,14 +24,14 @@
             <div class="col_4">
                 <div class="calendar_block">
                     <h1>PROCHAIN EVENEMENT</h1>
-                    <p><span class="day_calendar">{{$eventDayDate}}</span> <span class="month_calendar">{{$eventMonthDate}}</span></p>
-                    <p class="lieu_calendar">{{$eventNext->localisation}}</p>
+                    <p class="date"><span class="day_calendar">{{$eventDayDate}}</span> <span class="month_calendar">{{$eventMonthDate}}</span></p>
+                    <p class="lieu_calendar"><i class="fa fa-map-marker"></i> {{$eventNext->localisation}}</p>
                     <a class="button_go" href="{{url('agenda')}}">PLUS D'INFOS</a>
                 </div>
             </div>
             <div class="col_5">
                 <p class="intro">La collection a besoin d’un <span class="bold">lieu pour s’exposer</span> au plus grand nombre !	Aider nous à lui trouver ce lieux en <span class="bold">faisant un don</span>.</p>
-                <a class="button_donate" href="#">FAIRE UN DON</a>
+                <a class="button_go" href="#">FAIRE UN DON</a>
             </div>
             <div class="col_6">
                 <h1><img id="progressbar" src="{{url('assets/css/pictures/progressbar.png')}}"><span class="percent_donate">50%</span></h1>
