@@ -12,9 +12,12 @@ use App\Http\Requests\EventRequest;
 
 class FrontController extends Controller
 {
-    public function index()
+    public function index(Event $event)
     {
-        return view('front.parts.index');
+        $eventNext = $event->getNextEvent();
+        $eventDayDate = substr($eventNext->event_date_begin, 0, 2);
+        $eventMonthDate = $this->selectMonth(substr($eventNext->event_date_begin, 3, 2));
+        return view('front.parts.index', compact('eventNext', 'eventDayDate', 'eventMonthDate'));
     }
 
     public function selfie()

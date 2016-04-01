@@ -104,6 +104,7 @@
   background-size: cover;
   padding-top: 195px;
   width: 100%;
+  overflow: hidden;
 }
 
 ////////////////////////////// PHOTO
@@ -857,3 +858,138 @@ canvas{
 }
 
 
+//////////////////////// HEADER //////////////////
+
+#header{
+  width: 90%;
+  margin-left: 5%;
+  .upper_header{
+    .col_1, .col_2, .col_3{
+      display: inline-block;
+      width: 32%;
+      margin: 10px;
+    },
+    .col_1{
+      .header_title{
+        font-family: 'theboldfont', arial, sans-serif;
+        font-size: 52px;
+        color: white;
+        text-shadow: -2px 2px 0px #73bdc0;
+        text-align: left;
+        margin-left: 10%;
+        display: block;
+        width: 100%;
+        .subtitle1{
+          line-height: 62px;
+          display: block;
+          margin-left: 15%;
+        },
+        .subtitle2{
+          line-height: 62px;
+          display: block;
+          margin-left: 37%;
+        }
+      }
+    },
+    .col_2{
+      color: white;
+    },
+    .col_3{
+      .take_selfie{
+        .minipic{
+          width: 25%;
+          display: inline-block;
+          border: solid 4px white;
+        }
+        h1{
+          font-family: 'theboldfont', arial, sans-serif;
+          background-color: #df5b66;
+          width: 120%;
+          display: block;
+          padding: 10px;
+          border: solid 4px white;
+        }
+        .mini_desc{
+          display: inline-block;
+          background-color: #df5b66;
+          font-size: 11px;
+          font-style: italic;
+          font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+          padding: 5px;
+          margin-left: 5px;
+        }
+        .button_go{
+          display: block;
+          color: white;
+          padding: 15px;
+          font-size: 30px;
+          width: 15%;
+          text-decoration: none;
+          font-family: 'theboldfont', arial, sans-serif;
+          background-color: #6fbcc0;
+          -moz-box-shadow: 4px 4px 5px 0px #656565;
+          -webkit-box-shadow: 4px 4px 5px 0px #656565;
+          -o-box-shadow: 4px 4px 5px 0px #656565;
+          box-shadow: 4px 4px 5px 0px #656565;
+          vertical-align: middle;
+          margin-top: 20px;
+        }
+        .button_go:hover{
+          background-color: #64a0a2;
+        }
+        .button_go:active{
+          background-color: #518587;
+        }
+      }
+    }
+  },
+  .lower_header{
+    .col_4, .col_5, .col_6{
+      display: inline-block;
+      width: 32%;
+      margin: 10px;
+    }
+    .col_4{
+      color: white;
+      .calendar_block{
+
+      }
+    }
+    .col_5{
+
+    }
+    .col_6{
+
+    }
+  }
+}
+
+.blue_subtitle{
+  color: #73bdc0;
+  font-size: 37px;
+  font-family: 'theboldfont', arial, sans-serif;
+  display: inline-block;
+  width: 33%;
+  text-align: right;
+  margin-left: -60px;
+}
+.subtitle_1{
+  display: inline-block;
+  width: 40%;
+}
+.bigger_one{
+  font-size: 220px;
+  font-family: arial ,sans-serif;
+  text-shadow: -2px 2px 0px #73bdc0;
+  display: inline-block;
+  width: 44%;
+  margin-left: 17%;
+}
+.ere{
+  font-size: 47px;
+  font-family: arial, sans-serif;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 15px;
+  text-shadow: -2px 2px 0px #73bdc0;
+}

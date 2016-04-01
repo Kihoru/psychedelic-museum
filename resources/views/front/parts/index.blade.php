@@ -2,6 +2,43 @@
 
 
 @section('content')
+    <section id="header">
+        <div class="upper_header">
+            <div class="col_1">
+                <h1 class="header_title">Devenez <span class="subtitle1">mécène</span> <span class="subtitle2">de la</span></h1>
+            </div>
+            <div class="col_2">
+                <h2 class="subtitle_1"><span class="bigger_one">1</span><span class="ere">ere</span></h2>
+                <h2 class="blue_subtitle">Collection Psychedelique</h2>
+            </div>
+            <div class="col_3">
+                <div class="take_selfie">
+                    <h1>#TOUSPSYCHE</h1>
+                    <p class="mini_desc">Créer ton propre selfie psyché</p>
+                    <img class="minipic" src="{{url('assets/css/pictures/1.png')}}">
+                    <a class="button_go" href="{{url('selfie')}}">Go !</a>
+                </div>
+            </div>
+        </div>
+        <div class="lower_header">
+            <div class="col_4">
+                <div class="calendar_block">
+                    <h1>PROCHAIN EVENEMENT</h1>
+                    <p><span class="day_calendar">{{$eventDayDate}}</span> <span class="month_calendar">{{$eventMonthDate}}</span></p>
+                    <p class="lieu_calendar">{{$eventNext->localisation}}</p>
+                    <a class="button_go" href="{{url('agenda')}}">PLUS D'INFOS</a>
+                </div>
+            </div>
+            <div class="col_5">
+                <p class="intro">La collection a besoin d’un <span class="bold">lieu pour s’exposer</span> au plus grand nombre !	Aider nous à lui trouver ce lieux en <span class="bold">faisant un don</span>.</p>
+                <a class="button_donate" href="#">FAIRE UN DON</a>
+            </div>
+            <div class="col_6">
+                <h1><img id="progressbar" src="{{url('assets/css/pictures/progressbar.png')}}"><span class="percent_donate">50%</span></h1>
+                <p><span class="bold">15 000 €</span> collectés / <span class="bold">30 000€</span></p>
+            </div>
+        </div>
+    </section>
     <section id="presentation">
         <h1>Presentation</h1>
         <iframe src="https://player.vimeo.com/video/161036571" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
